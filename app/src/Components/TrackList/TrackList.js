@@ -1,17 +1,17 @@
 import React from 'react';
 import Track from '../Track/Track';
 
-export function renderAction() {
-    console.log('Hello')
-}
-
-export default function TrackList() {
+export default function TrackList(props) {
+    const results = props.results;
+    const onAdd = props.onAdd;
+    const onRemove = props.onRemove;
+    const isRemoval = props.isRemoval;
+    // const renderResults = results.map(track => {
+    //         return <Track isRemoval={isRemoval} onAdd={onAdd} onRemove={onRemove} key={track.id} track={track} />
+    //     });
     return (
         <div className="TrackList">
-            {/* <!-- You will add a map method that renders a set of Track components  --> */}
-            <Track />
-            <Track />
-            <Track />
+            {/* {renderResults} */}
         </div>
     );
 }
